@@ -1,0 +1,448 @@
+\documentclass[a4paper,fleqn,usenatbib]{mn2e}
+
+\usepackage[hyperfootnotes=false]{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=blue,
+  linkcolor=red,
+  urlcolor=cyan}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{pgfplotstable}
+\usepackage{newtxtext,newtxmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{lscape}
+\usepackage[LGRgreek]{mathastext}
+
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+% fancy section symbol
+\usepackage{cleveref}
+\crefname{section}{$\S$}{$\S\S$}
+\Crefname{section}{$\S$}{$\S\S$}
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}   % Including figure files
+\graphicspath{{Users/}{owenturner/}{Documents/}{PhD/}{KMOS/}{paper_1/}{Figures/}}
+\usepackage{amsmath}    % Advanced maths commands
+\usepackage{amssymb}    % Extra maths symbols
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+\newcommand{\Sers}{S\'{e}rsic }
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$} % per cm-squared
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%  PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title[KDS: dynamical properties of z$\sim3.5$ galaxies]{The KMOS Deep Survey (KDS): chemical measurements of $z\sim3.5$ main sequence galaxies\thanks{Based on observations obtained at the Very Large Telescope of the European Southern Observatory. Programme IDs: }}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+%\author[O.J. Turner et al.]{
+%O. J. Turner,$^{1,2,\thanks{E-mail: turner@roe.ac.uk (OJT)}}$
+%M. Cirasuolo,$^{1,2}$
+%C. M. Harrison,$^{2,3}$
+%J. Dunlop,$^{1}$
+%R. J. McLure,$^{1}$\newauthor
+%A. M. Swinbank$^{3,4}$
+%H. L. Johnson$^{3,4}$
+%D. Sobral$^{5}$
+%J. Matthee$^{6}$
+%R. M. Sharples$^{3,4}$
+%\\
+%$^{1}$SUPA\thanks{Scottish Universities Physics Alliance}, Institute for Astronomy, University of Edinburgh, Royal Observatory, Edinburgh EH9 3HJ\\
+%$^{2}$European Southern Observatory, Karl-Schwarzschild-Str. 2, 85748 Garching b. M{\"u}nchen, Germany\\
+%$^{3}$Centre for Extragalactic Astronomy, Durham University, South Road, Durham, DH1 3LE, U.K.\\
+%$^{4}$Institute for Computational Cosmology, Durham University, South Road, Durham, DH1 3LE, U.K.\\
+%$^{5}$Department of Physics, Lancaster University, Lancaster, LA1 4BY, U.K.\\
+%$^{6}$Leiden Observatory, Leiden University, PO Box 9513, NL-2300 RA Leiden, the Netherlands}
+
+\author[O.J. Turner et al.]{
+O. J. Turner,$^{1,2,\thanks{E-mail: turner@roe.ac.uk}}$
+\\
+$^{1}$SUPA\thanks{Scottish Universities Physics Alliance}, Institute for Astronomy, University of Edinburgh, Royal Observatory, Edinburgh EH9 3HJ\\
+$^{2}$European Southern Observatory, Karl-Schwarzschild-Str. 2, 85748 Garching b. M{\"u}nchen, Germany
+}
+
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2017}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+We present dynamical measurements of 44 O[III]$\lambda5007$ resolved main sequence star-forming galaxies at $z\sim3.5$ in the mass range log$(M_{\star}[M_{\odot}])$ $\sim9.5-10.5$ from the KMOS (K-band Multi-Object Spectrograph) Deep Survey (KDS).
+These measurements push back the frontier of dynamical studies using Integral-Field Spectroscopy, and provide robust constraints on the internal dynamics, via $\sigma_{int}$, and rotation velocities, ($V_{C}$), of galaxies in the high redshift universe.
+The mean of our sample is $\sigma_{int} = 70.8^{+3.3}_{-3.1} kms^{-1}$, in agreement with previous studies which have reported increasing $\sigma_{int}$ values with redshift.
+We find that $39 \pm 8\%$ of our galaxies are rotationally-dominated ($V_{C}/\sigma_{int}$ > 1), with the sample average $V_{C}/\sigma_{int}$ value much less than at lower redshift.
+The rotation dominated KDS galaxies show no clear offset from the local rotation velocity-stellar mass relation (inverse of the Tully-Fisher relation), although a smaller fraction of the galaxies sit on the relation due to the increase in the dispersion dominated fraction.
+The galaxies show a decrease in specific angular momentum (angular momentum divided by stellar mass) of $\sim0.6-0.7$dex in comparison to $z=0$ disk galaxies, with this evolution the result of the gradual size evolution of the star-forming population over cosmic time.
+Due to these more compact sizes, the KDS galaxies show a paucity of virial mass in comparison to stellar mass, which may be explained through an additional virial component originating in random motions, as traced by $\sigma_{int}$.
+To explore this further, we plot the S$_{0.5}$-stellar mass relation and find that the slope and normalisation are consistent with measurements between $z=0.1-1.2$, however there is no clear connection between $\sigma_{int}$ and stellar mass.
+These observations are in line with a simple equilibrium model picture, in which random motions are boosted in high redshift galaxies by the increase in gas fractions, accretion efficiency, specific star-formation rate and stellar feedback.
+There is a very high merger fraction of 89\% in a pointing covering the centre of the $z\sim3.1$ protocluster in the SSA22-a field, and merger fraction of 15\% across the remaining pointings.
+
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+galaxies:kinematics and dynamics -- galaxies:evolution -- galaxies:integral field spectroscopy
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
+
+\section{INTRODUCTION}
+
+% Check references here - exactly where does this scenario come from? 
+In the hierarchical collapse scenario \citep{Rees1977,Fall1980}, matter density perturbations, which originate from some set of cosmological initial conditions, grow over time before condensing out of the general expansion to form dark matter haloes \cite{Silk1968,Peebles1970}.
+It is at the centre of these dark matter halos that baryons collect, cool and begin to form stars (\cite{Birnboim2003,Keres2005,Dekel2006} and see e.g. \cite{Mo2010} for a recent review), with these systems constituting the first galaxies.
+One crucial ingredient shaping the subsequent evolution of this system is the transfer of angular momentum from the collapsing gas, as a protogalaxy which is rich in angular momentum is likely to form a turbulent, rotating disk, whereas if the angular momentum is low the formation of a spherical system dominated by random motions will ensue (e.g. \cite{Fall1983}). 
+
+It has been observationally determined that the galaxy population is bimodal in many physical properties at each redshift slice at which it is studied (e.g. as listed in \cite{Dekel2006}), with a preference for the most massive galaxies to lie in the red sequence, characterised by red optical colours, low star formation rates (SFRs) and spherical morphologies, and less massive galaxies in the blue sequence, characterised by blue colours, high star formation rates and disky morphologies. 
+For these blue, star-forming galaxies (SFGs) there is a roughly linear correlation between SFR and stellar mass ($M_{\star}$) \citep[e.g.][]{Daddi2007,Noeske2007,Elbaz2007}, in the sense that galaxies which have already accumulated a larger stellar population tend to have higher SFRs.
+This correlation, or `main sequence' underpins what is known as the equilibrium model, in which the SFR of galaxies is regulated by the availability of gas, and outflows and accretion events maintain a rough equilibrium as the galaxy evolves \citep[e.g.][]{Dave2012,Lilly2013,Saintonge2013}.
+The main sequence has been studied comprehensively, using multi-wavelength SFR tracers, between $0 < z < 3$ \citep[e.g.][]{Rodighiero2011,Karim2011,Whitaker2012,Behroozi2013b,Whitaker2014,Rodighiero2014,Speagle2014,Pannella2014,Sparre2015,Lee2015,Nelson2016}, with evolution of the relation towards higher SFRs at fixed $M_{\star}$ reported with increasing redshift, reflecting the increase of the cosmic star formation rate density in this redshift range \citep{Madau_2014}.
+At each redshift slice, galaxies on the main sequence are undergoing secular evolution regulated by their gas reservoirs, and so selecting such populations offers the chance to explore the evolution of the physical properties of typical SFGs across cosmic time.
+This assumes that high redshift main sequence galaxies are the progenitors of their lower redshift counterparts, which may not be the case \citep[e.g.][]{Gladders2013,Kelson2014,Abramson2016b}, and that something can be learned about galaxy evolution (i.e. how individual galaxies develop in physical properties over time) by studying the mean properties of populations at different epochs.
+The picture is complicated by the addition of major and minor mergers which can rapidly change the physical properties of galaxies \citep[e.g.][]{Toomre1977,Lotz2008,Conselice2011,Conselice2014}, and the relative importance of in-situ, secular stellar mass growth vs. stellar mass aggregation via mergers is the subject of much work involving both observations and simulations \citep[e.g.][]{Robaina2009,Kaviraj2012,Stott2013,Lofthouse2016,Qu2016}. 
+To account for the growing number density of quiescent galaxies from z$\sim 2.5$ to the present day \citep[e.g.][]{Brammer2011} there must also be some process which shuts off star-formation within main sequence galaxies (i.e. quenching) which, to explain observations, is a function of both mass and environment \citep{Peng2010}.
+
+Recent cosmological volume simulations are able to resolve the complex interplay of baryonic processes which are at work as galaxies evolve, and can track the development of individual galaxies from early stages, to maturity and through quenching \citep{Dubois2014a,Vogelsberger2014b,Schaye2015}.
+Observations can aid the predictive power of such simulations by providing constraints on the evolving physical properties of galaxy populations which must be reproduced across cosmic time.
+The observed dynamical properties of galaxies contain information about the transfer of angular momentum between dark matter halos and the baryons, and the dissipation of this angular momentum thereafter (through gravitational collpase, mergers and outflows \cite[e.g.][]{Fall1983,Romanowsky2012,Fall2013}), constituting an important set of quantities for simulators to reproduce.
+Developments in both Integral-Field Spectroscopy (IFS) instrumentation and data analysis tools over the last decade have led to the observation of two-dimensional velocity and velocity dispersion fields for large samples of galaxies of different morphological types, spanning a wide redshift range \citep[e.g.][]{Sarzi2005,Flores2006,Epinat2008,ForsterSchreiber2009,Cappellari2011,Gnerucci2011,Epinat2012,Croom2012,Bundy2015,Wisnioski2015,Stott2016} and when interpreted in tandem with high-resolution imaging data from the Hubble Space Telescope (HST) these data provide exquisite information about the range of physical processes which are driving galaxy evolution.
+In particular, in recent years the multiplexing capabilities of KMOS have allowed for IFS kinematic observations for large galaxy samples to build up over much shorter timescales \citep{Sobral2013,Wisnioski2015,Stott2016,Harrison2016,Mason2016} providing an order of magnitude boost in statistical power over previous high-redshift campaigns.    
+
+SFGs generally appear to be increasing in random motions with increasing redshift between $0 < z < 3$, as traced by their observed velocity dispersions, $\sigma_{obs}$ \citep{Genzel2008,ForsterSchreiber2009,Law2009,Cresci2009,Gnerucci2011,Epinat2012,Kassin2012,Green2014,Wisnioski2015,Stott2016}.
+This has been explained in terms of increased `activity' in galaxies during and before the global peak in cosmic Star Formation Rate Density (SFRD) \citep{Madau_2014}, in the form of higher specific star formation rates (sSFR) \citep{Wisnioski2015}, larger gas reservoirs \citep{Law2009,ForsterSchreiber2009,Wisnioski2015,Stott2016}, more efficient accretion \citep{Law2009}, increased stellar feedback from supernovae \citep{Kassin2012} and turbulent disk instabilities \citep{Law2009,Bournaud2007,Bournaud2016}, all of which combine to increase $\sigma_{int}$ and complicate its interpretation.
+There is also an increasing body of work measuring the relationship between the observed maximum rotational velocity of a galaxy, a tracer for the total dynamical mass, and its stellar mass, known as the stellar mass Tully-Fisher Relation (smTFR) \citep{Tully1977}, with surveys reporting disparate results for the evolution of this relation with redshift \citep[e.g.][]{Puech2008,Miller2011,Gnerucci2011,Tiley2016a,Harrison2017}.
+In both cases, systematic differences in measurement and modelling techniques at high redshift, especially with regards to beam smearing corrections, combine with our poor understanding of progenitors and descendants to blur the evolutionary picture which these surveys paint.
+
+% seeking to reconcile these differences as much as possible and provide a baseline of consistent kinematic measurements for comparison. 
+
+The KMOS Deep Survey (KDS) is a guaranteed time programme focussing on the spatially resolved properties of star forming galaxies during a time where the universe is building to peak activity.
+There are still many open questions which we can begin to answer by studying the emission from regions of ionised gas within individual galaxies at these redshifts.
+For example: \textbf{(1)} How do the physical conditions of the ISM such as electron density and ionisation parameter change as a function of spatial position within the galaxy, and what does this tell us about the application of strong line metallicity calibrators at high redshift?
+\textbf{(2)} What are the radial gradients in metal enrichment and would evidence for inverse gradients suggest infall of pristine gas to the central regions of these galaxies?
+\textbf{(3)} What are the connections between the chemical properties and the kinematics of the gas, particularly in terms of inflows and outflows of material?
+\textbf{(4)} What role does formation environment play in shaping the dynamical and chemical evolution of galaxies? 
+
+Attempting to spatially resolve the flux from emission lines at $z \sim 3.5$ necessarily requires on source integration times $>$ 6 hours, and so the multiplexing capability provides KMOS with an enormous advantage in terms of observing time over other instruments for this type of study.
+This has the knock-on effect of enabling a more general galaxy selection criteria, so that the KDS targets will be representative of the main sequence star forming population. 
+
+Many of these questions have already been addressed at lower redshift, as described above \citep{ForsterSchreiber2009,Wisnioski2015,Stott2016}, and also in a similar redshift range \cite{Gnerucci2011}.
+The KDS will complement the lower redshift results by providing an additional data point on any plots showing evolutionary sequences of derived physical properties, therefore providing a more complete description of galaxy evolution starting from before cosmic high noon and running up to the present day.
+The high redshift results of \cite{Gnerucci2011} will be expanded upon by the KDS, which extends to lower stellar masses and will increase the sample size for which physical properties can be resolved by roughly a factor of three.
+
+In this paper we focus on deriving and interpreting the spatially resolved kinematics of KDS galaxies using the OIII$\lambda$5007 emission line, discussing what we can learn about the nature of galaxy formation at $z \sim 3.5$, and focussing on forming evolutionary links with lower redshift work.
+We combine our KMOS data with the high resolution and sensitivity of the Hubble Space Telescope (HST) WFC3 H-band imaging in a spectro-photometric analysis, so that the kinematics can also be understood in the context of galaxy morphology.
+In a future paper, (Turner \textit{et al.} in prep.), we will investigate the radial gradients in galaxy metallicity and hence the spatially resolved physical conditions within the ISM.
+
+The structure of the current paper is as follows. In \cref{sec:Survey_and_data} we present the survey description, sample selection, observation strategy and data reduction.
+In \cref{sec:extracting_properties} we explain how the two-dimensional maps of physical properties were extracted from our stacked datacubes and then describe the treatment of these maps and the modelling which leads to the final table of physical properties for the KDS galaxies. 
+\cref{sec:results} presents our physical findings which are then discussed in \cref{sec:discussion}.
+We then conclude in \cref{sec:conclusions}.
+Throughout this work we assume a standard $\Lambda$CDM cosmology with (h, $\Omega_{m}$, $\Omega_{\Lambda}$) = (0.7, 0.3, 0.7). 
+
+\section{SURVEY DESCRIPTION, SAMPLE SELECTION AND OBSERVATIONS}\label{sec:sample_and_dr}
+The KDS is a survey of the gas kinematics and chemical compositions of $\sim80$typical $z\sim3.5$ galaxies observed with KMOS.
+Full details of the survey, sample selection, data reduction, dynamical modelling and kinematic parameter extraction can be found in Turner et al. 2017, however we present a brief overview of the survey and the sample used throughout Section \ref{sec:results} in the following subsections.
+
+\subsection{The KDS \& sample selection}\label{subsec:sample_selection}
+The KMOS Deep Survey (KDS) is a guaranteed time programme focusing on the spatially resolved properties of typical SFGs at $z\sim3.5$, a time when the universe was building to peak activity.
+We aim to use these data to guide our understanding of early disk formation both in terms of the observed kinematics and chemistry, inferred through rest-frame ionised emission line observations.
+
+The $\sim80$ KDS target galaxies have a previous spectroscopic detection and were selected to fall in the range $3.0 < z < 3.8$.
+We probe both low and high galaxy density regions spanning GOODS-S \citep[e.g.][]{Koekemoer2011,Grogin2011,Guo2013} and SSA22 \citep[e.g.][]{Steidel1998}, which are covered by wide-baseline and high-resolution ancillary photometry to allow us to infer galactic physical properties with SED fitting and for morphological classification.
+We have verified using both the rest-frame UVJ colour space diagnostic and the SFR vs. $M_{\star}$ `main sequence' plot that the KDS target galaxies fall in the loci defined by typical star-forming at these redshifts Turner et al. 2017. 
+\subsection{Observations with KMOS and data reduction}\label{subsec:kmos_observations}
+KMOS is a second generation IFS mounted at Nasmyth focal plane on UT1 at the VLT.
+The instrument has 24 moveable pickoff arms, each with an integrated IFU, which patrol a region 7.2$^{\prime}$ in diameter on the sky, providing considerable flexibility when selecting sources for a single pointing.
+The light from each set of 8 IFUs is dispersed by a single spectrograph and recorded on a 2k$\times$2k Hawaii-2RG HgCdTe near-IR detector, so that the instrument is comprised of three effectively independent modules.
+
+The target galaxies were observed with KMOS during ESO observing periods P92-P96 using Guaranteed Time Observations (Programme IDs: 092.A-0399(A), 093.A-0122(A,B), 094.A-0214(A,B),095.A-0680(A,B),096.A-0315(A,B,C)) with excellent K-band seeing conditions ranging between $0.5-0.7^{\prime\prime}$.
+The on source exposure times range between 7-10 hours, accumulated using a standard object-sky-object (OSO) nod-to-sky observation pattern, with 300s exposures and alternating $0.2^{\prime\prime}$/$0.1^{\prime\prime}$ dither pattern for increased spatial sampling around each of the target galaxies.
+We also observe standard stars to allow for flux calibration of the data products and assign a tracking star to one IFU on each detector to monitor the shifts which must be applied to each exposure when stacking. \\ 
+
+Data reduction is carried out using the Software Package for Astronomical Reduction with KMOS, (SPARK; \cite{Davies2013}), implemented using the ESO Recipe Execution Tool (ESOREX) \citep{Freudling2013}, with additional python scripts for non-standard methods (Turner et al. 2017).
+Following the reduction of each object-sky pair, all exposures are stacked together to create a final datacube for each object. 
+We attempt to make an integrated measurement of the 
+
+
+\subsection{Morphological \& kinematic measurements}\label{subsec:measurements}
+
+\subsection{The isolated field sample}\label{subsec:isolated_field_sample}
+
+
+\section{Results and Discussion}\label{sec:results}
+Comments in here about overall structure of the results section and what we will do.
+
+\subsection{Virial Mass}\label{subsec:dynamical_masses}
+
+\begin{figure*}
+    \centering \hspace{-1.3cm}
+    \begin{subfigure}[h!]{0.5\textwidth}
+        \centering
+        \includegraphics[height=3.5in]{rv_squared.png}
+    \end{subfigure} \hspace{+0.4cm}
+    \begin{subfigure}[h!]{0.5\textwidth}
+        \centering
+        \includegraphics[height=3.5in]{dynamical_mass_with_sigma.png}
+    \end{subfigure}
+    \caption{{\it Left:} We plot the ratio of virial to stellar mass, $M_{vir}/M_{\star}$, with the virial mass computed using only rotation velocities (Equation \protect\ref{eq:dyn_mass_kds}) vs. stellar mass for the isolated field sample, with the black line indicating equality between virial mass and stellar mass.
+    The red symbols show the galaxies with $V_{C}/\sigma_{int} > 1$ and the clear symbols show the galaxies with $V_{C}/\sigma_{int} < 1$, occupying a region with lower M$_{vir}$ values that the rotation domianted galaxies, as expected.
+    The majority of the points lie in the unphysical $M_{vir} < M_{\star}$ region.
+    {\it Right:} We plot virial mass, now computed with an additional component traced by the velocity dispersion (Equation \protect\ref{eq:dyn_mass_sigma} with $\beta=3.4$ as shown on the plot) vs. stellar mass, with the black line indicating equality between these quantities.
+    The addition of this component shifts most galaxies into the $M_{vir} > M_{\star}$ region and highlights the potential for a combination of random motions, traced by $\sigma_{int}$, and ordered rotation to play a role in supporting the total virial mass.}
+    \label{fig:dyn_masses}
+\end{figure*}
+
+Assuming that the virial theorem is applicable to these galaxies, it is possible to derive a relationship between the rotation velocity at a given radius and the mass enclosed within that radius (Equation \ref{eq:dyn_mass}). 
+
+\begin{equation}\label{eq:dyn_mass}
+   M\left(<R\right) = \frac{RV_{C}(R)^{2}}{G}
+\end{equation}
+
+For the KDS isolated field sample galaxies, as explained throughout \cref{sec:analysis}, the rotation velocities are extracted at $2R_{1/2}$ from the intrinsic models and so the mass enclosed within this radius is given by Equation \ref{eq:dyn_mass_kds} (where we refer hereafter to the mass enclosed as the virial mass, $M_{vir}$). 
+
+\begin{equation}\label{eq:dyn_mass_kds}
+   M_{vir} = \frac{2R_{1/2}V_{C}^{2}}{G}
+\end{equation}
+
+In the left panel of Figure \ref{fig:dyn_masses}, we plot the ratio of virial mass, computed using this simple equation, to stellar mass for the isolated field sample galaxies.
+The vast majority of galaxies in the isolated field sample show $M_{vir} < M_{\star}$ (with median value $M_{vir}/M_{\star}=0.28$), including those which are rotation dominated as defined by the ratio of $V_{C}/\sigma_{int} > 1$.
+The $M_{vir} < M_{\star}$ region is unphysical as the virial mass should trace the total mass enclosed within $2R_{1/2}$, and at the sample median redshift of $z=3.5$ the gas mass is expected to be a factor of $\sim3$ times the stellar mass in typical star-forming galaxies \citep{Tacconi2013,Tacconi2017}, and dark matter is also present within the galactic disk (although it has been suggested that this component contributes less with increasing redshift \citealt{Ubler2017,Genzel2017,Lang2017}).
+
+This strongly suggests that the rotational motions alone are not sufficient to provide gravitational support for the mass in the system.
+As shown in Turner et al. 2017 (and see \cref{subsec:rot_and_m}), the rotation dominated galaxies are consistent with the $V_{C}-M_{\star}$ relation defined in the local universe and at $z\sim0.9$ from KROSS \citep{Harrison2017}, however they show half-light radii which are a factor of $\sim2-3$ smaller than these galaxies.
+This reduction in size at fixed mass does not appear to be accompanied by an increase in rotation velocity in the isolated field sample galaxies. \\
+
+A possible solution to this discrepancy is that the random motions in the systems, as traced by the velocity dispersions, provide partial gravitational support for the total disk mass as has been previously suggested \citep[e.g.][]{Burkert2010,Newman2013,Ubler2017}.
+This contribution becomes increasingly significant with increasing redshift as the ratio of rotation velocity to velocity dispersion becomes smaller \citep[e.g.][]{ForsterSchreiber2009,Law2009,Epinat2012,Stott2016} Turner et al. 2017.
+That is to say that turbulent pressure support generated by gravitational instabilities causes an `asymmetric drift' correction \citep[e.g.][]{Burkert2010} which reduces the observed rotation velocities, which are subsequently an inadequate tracer of the total virial mass in the galaxies.
+A revised formula for the virial mass is given below by Equation \ref{eq:dyn_mass_sigma}, which includes a contribution from the velocity dispersion.
+
+\begin{equation}\label{eq:dyn_mass_sigma}
+   M_{vir} = \frac{2R_{1/2}\left(V_{C}^{2} + \beta\sigma_{int}^{2}\right)}{G}
+\end{equation}
+
+For an exponential mass distribution, $\beta=3.4$ \citep{Burkert2010,Newman2013}, and in the right panel of Figure \ref{fig:dyn_masses} we plot the comparison of virial mass, computed using Equation \ref{eq:dyn_mass_sigma} with this $\beta$ value, and stellar mass.
+From Equation \ref{eq:dyn_mass_sigma} we can define a new `total' velocity, which is given by $V_{tot} = \sqrt{V_{C}^{2} + 3.4\sigma_{int}^{2}}$. 
+
+With this additional virial mass component sourced by the velocity dispersion, most of the isolated field sample galaxies shift to the $M_{vir} > M_{\star}$ region and the discrepancy between dispersion and rotation dominated galaxies no longer remains.
+To reach the value $M_{vir} = 2M_{\star}$ the isolated field galaxies require a median $\beta$ value of $\sim5.0$, with a wide distribution that has 16th and 84th percentiles of 0.7 and 12.5 respectively.
+Here we do not seek to derive a precise value, merely to show that a sigificant contribution to the dynamical mass appears necessary in order to provide gravitational support for the expected baryonic material within $2R_{1/2}$ for the isolated field sample. 
+
+%To follow this idea we can compute the contribution to $M_{vir}$ from $\sigma_{int}$ using equation \ref{eq:dyn_mass_sigma} \citep[e.g.][]{Cappellari2006}.
+%\begin{equation}\label{eq:dyn_mass_sigma}
+%   M_{vir} = \frac{2R_{1/2}V_{C}^{2}}{G} + \frac{\beta R_{1/2}\sigma_{int}^{2}}{G}
+%\end{equation}     
+%In general the amount gravitational suport provided by $\sigma_{int}$ depends on galaxy geometry and structure \citep[e.g.][]{Cappellari2006,Belli2014}, with this dependence contained in the value of $\beta$ in equation \ref{eq:dyn_mass_sigma}.
+%It is possible to derive a relationship between $\beta$ and \Sers index, a proxy for galaxy structure, as detailed in \cite{Cappellari2006} and shown in equation \ref{eq:beta_n}.
+%\begin{equation}\label{eq:beta_n}
+%   \beta(n) = 8.87 - 0.831n + 0.0241n^{2}
+%\end{equation} 
+%Now simply stating that it is possible to find the lower limit on beta to bring the dynamical masses above the stellar masses, BUT that realistically the data do not allow us to figure out the contribution from sigma so just quoted for interest
+%We have modelled the galaxies throughout the analysis as n = 1 exponential disks, verifying this assumption throughout \cref{subsubsec:galfitting}, for which $\beta(n) \sim 8$.
+
+
+\subsection{The stellar mass Tully-Fisher relation}\label{subsec:rot_and_m}
+
+\begin{figure*}
+    \centering \hspace{-1.3cm}
+    \begin{subfigure}[h!]{0.5\textwidth}
+        \centering
+        \includegraphics[height=3.5in]{tully_fisher_standard_log.png}
+    \end{subfigure} \hspace{0.4cm}
+    \begin{subfigure}[h!]{0.5\textwidth}
+        \centering
+        \includegraphics[height=3.5in]{tully_fisher_with_sigma.png}
+    \end{subfigure}
+    \caption{{\it Left:} We plot rotation velocity vs. stellar mass for the rotation and dispersion dominated isolated field galaxies.
+    We also plot with the solid green line the $z\sim0.9$ relation recovered from a fit to $\sim400$ rotation dominated galaxies from the KROSS survey \protect\cite{Harrison2017}, with the shaded region showing the associated $\sim$0.2 dex scatter on the fit.
+    The black dashed line shows a fit to local spiral galaxies with $z<0.1$ from \protect\cite{Reyes2011}.
+    The red and cream coloured lines show the results of fitting the relation $log{\it V_{C}} = \beta + \alpha[log{\it M_{\star}} - 10.1]$ to the rotation and dispersion dominated galaxies respectively, with $\alpha$ fixed to the KROSS value of 0.33 \protect\cite{Harrison2017}.
+    The shaded regions around these lines represent the $1-\sigma$ uncertainty on the fit. 
+    The rotation dominated galaxies are best fit with a relation $\sim0.1$ dex below the KROSS relation, with the dispersion dominated galaxies $\sim0.3$ dex below. 
+    {\it Right:} We plot the $V_{tot}$ vs. stellar mass relation for the full isolated field sample, which includes a contribution to the velocity from random motions traced by the velocity dispersion.
+    When fit with the same relation, the best fit result lies $\sim0.07$ dex above the KROSS value and is entirely consistent within the scatter.
+    This suggests no evolution in a consistently selected set of galaxies in the stellar mass Tully-Fisher relation, which includes a contribution from random motions within the galaxies.}
+    \label{fig:tf_relation}
+\end{figure*}
+
+As metioned in the introduction, the stellar mass Tully-Fisher relation connects the dynamical and luminous mass of a galaxy.
+The evolution of this relation...
+
+In the left panel of Figure \ref{fig:tf_relation} we plot the standard Tully-Fisher relation, with intrinsic rotation velocity, $V_{C}$, plotted against stellar mass.
+The sample is divided into rotation and dispersion dominated galaxies as in Turner et al. 2017 and we fit the relation $log{\it V_{C}} = \beta + \alpha[log{\it M_{\star}} - 10.1]$ \citep[e.g.][]{Reyes2011,Harrison2017} to both of these subsamples in turn.
+Throughout the fitting procedure we adopt a fixed value for $\alpha$ and allow $\beta$ to vary.
+We use the value $\alpha=0.33\pm0.11$ from \cite{Harrison2017}, drawing from a gaussian distribution centred on 0.33 and with width 0.11 in order to fix the slope.
+The python package {\tt LMFIT} \citep{Newville2014} which makes use of the Levenberg-Marquardt algorithm is used for the minimisation, which is carried out 1000 times in order to find a gaussian distribution of $\beta$ values.
+We also vary the datapoints in both x and y directions by drawing from a gaussian distribution with width given by the individual errors. 
+The median of the distribution of $\beta$ values is taken as the fit result and the $1-\sigma$ error is taken as the average of the 16th and 84th percentiles of the distribution.
+
+For the rotation and dispersion dominated galaxies we find $\beta_{rot,z=3.5} = 2.02\pm0.05$, $\beta_{disp,z=3.5} = 1.80\pm0.07$ which are $\sim0.1$ and $\sim0.3$ dex below the $z\sim0.9$ KROSS rotation dominated value of $\beta_{rot,z=0.9} = 2.12\pm0.04$ \citep{Harrison2017} respectively.
+Although the rotation dominated galaxies lie below the KROSS relation, the measurements have large errors associated with them and the width of the scatter among the individual KROSS datapoints is $\sim0.2$ dex.
+From this, there is no compelling evidence for evolution of the zero-point of the stellar-mass Tully-Fisher relation between $z\sim0.9-3.5$ for {\it rotation dominated} galaxies selected in a consistent way with $V_{C}/\sigma_{int} > 1$ \\
+
+% mentioning that the low mass galaxies are ommitted from the fit in all cases
+In the right panel of Figure \ref{fig:tf_relation} we plot the same relation using $V_{tot}$ vs. stellar mass to explore the impact of adding pressure support in an exponential mass distribution.
+The same fitting procedure as described above is applied to the full sample (i.e. no longer divided into rotation and dispersion dominated), returning the value $\beta_{comb,z=3.5} = 2.19\pm0.03$. 
+This intercept is $\sim0.07$ dex above the KROSS value, which is small compared to the scatter and individual errors on the datapoints in both samples.
+There is also reduced scatter in the best fit parameter for the $V_{tot}$ vs. $M_{\star}$ combined sample than in either the rotation or dispersion dominated $V_{C}$ vs. $M_{\star}$ samples.
+The joint evidence that using $V_{tot}$ generally pushes galaxies into the physical $M_{vir} > M_{\star}$ region and correlates tightly with stellar mass across both the rotation and dispersion dominated subsamples suggests that this quantity is better tracer of the total gravitational support in the system.
+The right panel of Figure \ref{fig:tf_relation} shows that even with the addition of pressure support to derive a `total' velocity, using the derived values for the KDS isolated field sample there is no evidence for significant evolution in the zero-point of the stellar mass Tully-Fisher relation between $z=0-3.5$ for galaxies selected consistently between this interval.
+
+
+\subsubsection{Discussion}\label{subsubsec:tf_discussion}
+The inclusion of motions traced by the velocity dispersion in the derivation of a `complete' velocity has been considered previously in the form of the $S_{0.5} = \sqrt{0.5V_{C}^{2} + \sigma_{int}^{2}}$ vs. $M_{\star}$ \citep[e.g.][]{Kassin2007,Kassin2012}, which is consistent also with the absorption-line-based $M_{\star}$ Faber-Jackson relation for nearby elliptical galaxies.
+
+The $S_{0.5}$ relation shows reduced scatter in comparison to the standard stellar-mass Tully-Fisher relation, and shows no zero-point evolution between $z=0-1.2$, attributed to the inclusion of galaxies with peculiar kinematics in the sample with reduced rotation velocities in relation to their stellar mass.
+$S_{0.5}$ has been studied in both \cite{Cresci2009} and \cite{Gnerucci2011}, with both reporting an evolution of the \cite{Kassin2007} trend towards lower $M_{\star}$ at fixed $S_{0.5}$, which is taken as further evidence for the evolution of the smTFR.
+
+The symbol convention is the same as in the left panel and the division now between the rotation and dispersion dominated galaxies is no longer clear. 
+Considering the increase in observed $\sigma_{int}$ values over cosmic time, this suggests that there is an interplay between the $V_{C}$ values and $\sigma_{int}$ traced by ionised gas emission lines as discussed in \cite{Kassin2012}. 
+We caution against over-interpretation of this result, since the origin of $\sigma_{int}$ and the extent to which this quantity traces dynamical mass is unclear, however this trend adds to the evidence that $V_{C}$ alone is an insufficient tracer of the total dynamical mass at this redshift. \\
+\cite{Straatman2017} and \cite{Ubler2017} and sample selection
+
+
+
+\subsection{Angular Momentum}\label{subsec:ang_mom}
+
+\begin{figure*}
+    \centering \hspace{-1.3cm}
+    \begin{subfigure}[h!]{0.5\textwidth}
+        \centering
+        \includegraphics[height=3.5in]{angular_momentum.png}
+    \end{subfigure} \hspace{0.4cm}
+    \begin{subfigure}[h!]{0.5\textwidth}
+        \centering
+        \includegraphics[height=3.5in]{angular_momentum_with_sigma.png}
+    \end{subfigure}
+    \caption{{\it Left:} We plot the specific angular momentum $j_{s} \propto R_{1/2}V_{C}$ against stellar mass, $M_{\star}$, for the rotation and dispersion dominated galaxies with the red and cream coloured symbols respectively.
+    Included also are the $j_{s} \propto M_{\star}^{\alpha}$ fits (with $\alpha = 0.6\pm0.2$) reported in H17 for the KROSS full sample in solid green and for the rotation and dispersion dominated subsamples with the dashed green lines.
+    The black solid line is the fit presented in \protect\cite{Romanowsky2012} to a sample of $z=0$ disk galaxies ($\alpha = 0.51\pm0.06$), to which the KROSS relation is offset in $j_{s}$ by $\sim0.2-0.3$dex.
+    The KDS rotation dominated galaxies are offset from the KROSS relation by a further $\sim0.3-0.4$dex, with the dispersion dominated galaxies scattering to lower $j_{s}$, with both KDS subsets following a roughly similar slope to KROSS and the $z=0$ sample.
+    Further, we include the $j_{s} \propto (1+z)^{-1}$ evolution reported in \protect\cite{Swinbank2017} with the red solid line, using the local slope and normalisation, which appears to pass through the KDS rotation dominated galaxies.
+    These results are in line with a scenario where the cosmic evolution of $j_{s}$ is driven mainly by the size evolution of galaxies as they accrete cold material to form stars from the IGM, adding to the outer components of the galaxy disks.
+    The split between rotation dominated and dispersion dominated galaxies may indicate that these systems are the progenitors of local late-type and early-type galaxies respectively.}
+    \label{fig:ang_mom}
+\end{figure*}
+
+The smTFR derives directly from the virial theorem, in which changes to the dynamical mass are driven by changes in both the sizes and velocities of galaxies, prompting authors recently \citep[e.g.][]{Cortese2016,Contini2015a,Burkert2016a,Harrison2017,Swinbank2017} to study the connection between $M_{\star}$ and specific angular momentum, $j_{s} \propto R_{1/2}V_{C}$, with this possibly a more fundamental quantity to describe galaxy evolution.
+We briefly discuss the specific angular momentum of the KDS galaxies in \cref{subsec:ang_mom}, continuing now to study the virial masses of the isolated field sample computed from their derived rotation velocities.
+In figure \ref{fig:ang_mom} we plot the specific angular momentum, j$_{\star} \equiv J/M_{\star}$ where J is the total angular momentum \citep{Fall1983}, as a function of stellar mass M$_{\star}$.
+This quantity has been described in detail in \cite{Harrison2017} section 4.3 and we refer to this for more details about the use of $j_{s}$ as measured from ionised gas kinematics as a tracer of the specific angular momentum content of SFGs.
+
+\begin{equation}\label{eq:ang_mom}
+   j_{n} = k_{n}C_{i}v_{s}R_{1/2}
+\end{equation}
+
+In equation \ref{eq:ang_mom} we list the approximate estimator for specific angular momentum described in \cite{Romanowsky2012} (their equation 6), with k$_{n}$ a numerical coefficient which depends on the \Sers index of the galaxy, n, and is approximated in equation \ref{eq:kn} (see \cite{Romanowsky2012}).
+
+\begin{equation}\label{eq:kn}
+   k_{n} = 1.15 + 0.029n + 0.062n^{2}
+\end{equation}
+
+Due to varying {\em HST} coverage and quality, it has not been possible to estimate n for all KDS galaxies.
+However we have verified throughout \cref{subsubsec:galfitting} that the GOODS-S galaxies are well described by the n = 1 exponential profile through a combination of {\tt GALFIT} and comparison to the \Sers index values reported in \cite{VanderWel2012}.
+Setting n = 1 in equation \ref{eq:kn} leaves $k_{n} = 1.19$ and we continue under this assumption analogous to in \cite{Harrison2017} (although we note that as stated in \cite{Harrison2017} setting n = 2 results in $\sim20\%$ difference in the derived $j_{s}$ values).
+In equation \ref{eq:ang_mom} $C_{i}$ is the de-projection factor, assumed to be $1/sin(i)$, and $v_{s}$ is the observed velocity at $2R_{1/2}$.
+The combination $v_{s}C_{i} \equiv V_{C}$ and we can use our measured rotation velocities to leave equation \ref{eq:ang_mom_final} as the final expression for $j_{s}$. 
+
+\begin{equation}\label{eq:ang_mom_final}
+   j_{n=1} \equiv j_{s} = 1.19V_{C}R_{1/2}
+\end{equation}
+
+
+
+In figure \ref{fig:ang_mom} we plot the fit to all KROSS galaxies with the solid green line, and also the individual fits to the rotation and dispersion dominated KROSS galaxies with the dashed green and light green lines respectively.
+The fits to the full sample and rotation dominated KROSS galaxies (with fitting relation defined by log$j_{s} =  \beta + \alpha[logM_{\star} - 10.10]$) lie $\sim0.2-0.3$ dex beneath the $z\sim0$ relation from \cite{Romanowsky2012}, in contrast to the smTFR, with the dispersion dominated galaxies scattering around much lower $j_{s}$ values.
+This offset is explained to be a consequence mainly of the size evolution of the disks of SFGs over the redshift range $z=0-0.9$.
+The local and KROSS relations have comparable slopes, with $\alpha_{z=0}=0.51\pm0.06$ and $\alpha_{z=0.9}=0.6\pm0.2$, in agreement with other studies of the $j_{s}-M_{\star}$ relation \citep{Cortese2016,Contini2015a,Burkert2016a,Swinbank2017}, and also in agreement with predictions for the slope of the relationship between dark matter specific angular momentum and the halo mass (i.e. $j_{halo} \propto M_{halo}^{2/3}$ \citep[e.g.][]{Barnes1987}).
+This is widely regarded as a consequence of the baryonic retention of angular momentum following a period in the formation of the proto-galaxy when the dark matter and baryons were well mixed. \\
+
+The rotation dominated KDS galaxies form a sequence $\sim 0.3-0.4$ dex beneath the KROSS relation, and with similar slope, however the slope is not well constrained due to the scatter and sparsity of the dataset.
+The dispersion dominated KDS galaxies form a sequence with similar slope but offset to lower still $j_{s}$ values.
+We plot also the $j_{s} \propto (1+z)^{-1}$ evolution line reported in \cite{Swinbank2017} (using the local slope and normalisation from \cite{Romanowsky2012}), which the rotation dominated KDS galaxies appear to roughly follow. \\
+
+These results suggest that there is a continual drop in the specific angular momentum of SFGs with increasing redshift, as governed by the evolution of disk sizes \citep[e.g.][]{Trujillo2007} (see figure \ref{fig:morpho-distributions}) and that the relationship between the angular momentum of the baryons and the halos is constant over time.
+Conversely, the angular momentum of SFGs will increase with decreasing redshift as accretion of cold gas from the IGM which fuels star formation and tidal disruption from satellite galaxies or major mergers conspire to grow disk sizes over time \citep{Trujillo2007,Buitrago2008,VanderWel2014a}.
+Additonally since we observe a bimodal distribution of the rotation and dispersion dominated KDS galaxies in the $j_{s}-M_{\star}$ plane, we are plausibly observing the progenitors of late-type and early-type galaxies at $z\sim3.5$ as revealed by their kinematic signatures, consistent with the idea that early-type galaxies began their lives with less total angular momentum available to them.
+
+\subsubsection{Discussion}\label{subsubsec:ang_mom_discussion}
+
+\section{CONCLUSIONS}\label{sec:conclusion}
+We have presented new measurements of 77 main sequence star forming galaxies spanning both cluster and field environments at $z\sim3.5$ as part of the KMOS Deep Survey, based on IFU data observed with KMOS.
+These measurements push back the frontier of IFU observations in the early universe and provide more robust constraints on the internal and rotational dynamics of $9.5 < log(M_{\star}[M_{\odot}])< 10.5$ typical main sequence galaxies at these redshifts.
+By using a combined morpho-kinematic classification based on broad-band {\em HST} imaging and our IFU data, we have separated interacting galaxies from the sample, finding consistent merger rates in the field pointings ($\sim18\%$) and a very high merger rate in the cluster pointing ($\sim89\%$).
+We make made beam-smearing corrected measurements of $V_{C}$ and $\sigma_{int}$ for the remaining isolated field galaxies interpreting these in the context of previous dynamical studies using IFU data (\cref{app:comparison_samples} and Table \ref{tab:evolution_numbers}).
+The main conclusions of this work are summarised as follows:
+
+\begin{itemize}
+    \item To investigate the possible contribution of $\sigma_{int}$ to the total dynamical mass, we plot $S_{0.5} = \sqrt{0.5V^{2} + \sigma_{int}^{2}}$ as a function of $M_{\star}$, finding a tighter relationship than in the case of the inverse smTFR, with the $S_{0.5} vs. M_{\star}$ relation showing no evidence for evolution from the $z=0$ relation from \cite{Kassin2007} (Figure \ref{fig:tf_relation}).
+    We caution again that there is no clear relationship between $\sigma_{int}$ and $M_{\star}$ and this result should not be over-interpreted.
+    \item The virial mass computed from $V_{C}$ values alone is lower than the stellar mass for the majority of KDS galaxies.
+    We compute an additional component of the virial mass contributed by the velocity dispersion, shifting the virial mass above the stellar mass, and use this as a qualitative indicator that $\sigma_{int}$ is responsible for supporting some fraction of the total mass of the system (Figure \ref{fig:dyn_masses}).
+    This is clearly over-simplified, as the lack of correlation between $\sigma_{int}$ and $M_{\star}$ suggests that not all of the random motions support mass, and may originate from turbulence.
+    \item The specific angular momentum (angular momentum divided by stellar mass $M_{\star}$; $j_{s}$) of the KDS galaxies is $\sim$0.3-0.4 dex lower than KROSS galaxies at $z\sim0.9$ at fixed $M_{\star}$, and the slope of the $j_{s}-M_{\star}$ relation appears comparable between the two samples (Figure \ref{fig:ang_mom}).
+    This supports a scenario in which the derease in $j_{s} \propto R_{D}V_{C}$ with increasing redshift between $z=0-3.5$ is driven by the gradual size evolution of galaxies over the same redshift interval (Figure \ref{fig:morpho-distributions}).
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Alternatively you could enter them by hand, like this:
+% This method is tedious and prone to error if you have lots of references
+\clearpage 
+\bibliographystyle{apj.bst}
+%\bibliography{/usr/local/texlive/texmf-local/bibtex/bib/ojt.bib}
+\bibliography{/Users/owenturner/Documents/PhD/KMOS/Latex/Bibtex/library.bib}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+% Don't change these lines
+\bsp    % typesetting comment
+\label{lastpage}
+\end{document}
+
+% End of mnras_template.tex
