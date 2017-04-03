@@ -102,16 +102,7 @@ $^{2}$European Southern Observatory, Karl-Schwarzschild-Str. 2, 85748 Garching b
 
 % Abstract of the paper
 \begin{abstract}
-We present dynamical measurements of 44 O[III]$\lambda5007$ resolved main sequence star-forming galaxies at $z\sim3.5$ in the mass range log$(M_{\star}[M_{\odot}])$ $\sim9.5-10.5$ from the KMOS (K-band Multi-Object Spectrograph) Deep Survey (KDS).
-These measurements push back the frontier of dynamical studies using Integral-Field Spectroscopy, and provide robust constraints on the internal dynamics, via $\sigma_{int}$, and rotation velocities, ($V_{C}$), of galaxies in the high redshift universe.
-The mean of our sample is $\sigma_{int} = 70.8^{+3.3}_{-3.1} kms^{-1}$, in agreement with previous studies which have reported increasing $\sigma_{int}$ values with redshift.
-We find that $39 \pm 8\%$ of our galaxies are rotationally-dominated ($V_{C}/\sigma_{int}$ > 1), with the sample average $V_{C}/\sigma_{int}$ value much less than at lower redshift.
-The rotation dominated KDS galaxies show no clear offset from the local rotation velocity-stellar mass relation (inverse of the Tully-Fisher relation), although a smaller fraction of the galaxies sit on the relation due to the increase in the dispersion dominated fraction.
-The galaxies show a decrease in specific angular momentum (angular momentum divided by stellar mass) of $\sim0.6-0.7$dex in comparison to $z=0$ disk galaxies, with this evolution the result of the gradual size evolution of the star-forming population over cosmic time.
-Due to these more compact sizes, the KDS galaxies show a paucity of virial mass in comparison to stellar mass, which may be explained through an additional virial component originating in random motions, as traced by $\sigma_{int}$.
-To explore this further, we plot the S$_{0.5}$-stellar mass relation and find that the slope and normalisation are consistent with measurements between $z=0.1-1.2$, however there is no clear connection between $\sigma_{int}$ and stellar mass.
-These observations are in line with a simple equilibrium model picture, in which random motions are boosted in high redshift galaxies by the increase in gas fractions, accretion efficiency, specific star-formation rate and stellar feedback.
-There is a very high merger fraction of 89\% in a pointing covering the centre of the $z\sim3.1$ protocluster in the SSA22-a field, and merger fraction of 15\% across the remaining pointings.
+
 
 \end{abstract}
 
@@ -127,51 +118,6 @@ galaxies:kinematics and dynamics -- galaxies:evolution -- galaxies:integral fiel
 
 \section{INTRODUCTION}
 
-% Check references here - exactly where does this scenario come from? 
-In the hierarchical collapse scenario \citep{Rees1977,Fall1980}, matter density perturbations, which originate from some set of cosmological initial conditions, grow over time before condensing out of the general expansion to form dark matter haloes \cite{Silk1968,Peebles1970}.
-It is at the centre of these dark matter halos that baryons collect, cool and begin to form stars (\cite{Birnboim2003,Keres2005,Dekel2006} and see e.g. \cite{Mo2010} for a recent review), with these systems constituting the first galaxies.
-One crucial ingredient shaping the subsequent evolution of this system is the transfer of angular momentum from the collapsing gas, as a protogalaxy which is rich in angular momentum is likely to form a turbulent, rotating disk, whereas if the angular momentum is low the formation of a spherical system dominated by random motions will ensue (e.g. \cite{Fall1983}). 
-
-It has been observationally determined that the galaxy population is bimodal in many physical properties at each redshift slice at which it is studied (e.g. as listed in \cite{Dekel2006}), with a preference for the most massive galaxies to lie in the red sequence, characterised by red optical colours, low star formation rates (SFRs) and spherical morphologies, and less massive galaxies in the blue sequence, characterised by blue colours, high star formation rates and disky morphologies. 
-For these blue, star-forming galaxies (SFGs) there is a roughly linear correlation between SFR and stellar mass ($M_{\star}$) \citep[e.g.][]{Daddi2007,Noeske2007,Elbaz2007}, in the sense that galaxies which have already accumulated a larger stellar population tend to have higher SFRs.
-This correlation, or `main sequence' underpins what is known as the equilibrium model, in which the SFR of galaxies is regulated by the availability of gas, and outflows and accretion events maintain a rough equilibrium as the galaxy evolves \citep[e.g.][]{Dave2012,Lilly2013,Saintonge2013}.
-The main sequence has been studied comprehensively, using multi-wavelength SFR tracers, between $0 < z < 3$ \citep[e.g.][]{Rodighiero2011,Karim2011,Whitaker2012,Behroozi2013b,Whitaker2014,Rodighiero2014,Speagle2014,Pannella2014,Sparre2015,Lee2015,Nelson2016}, with evolution of the relation towards higher SFRs at fixed $M_{\star}$ reported with increasing redshift, reflecting the increase of the cosmic star formation rate density in this redshift range \citep{Madau_2014}.
-At each redshift slice, galaxies on the main sequence are undergoing secular evolution regulated by their gas reservoirs, and so selecting such populations offers the chance to explore the evolution of the physical properties of typical SFGs across cosmic time.
-This assumes that high redshift main sequence galaxies are the progenitors of their lower redshift counterparts, which may not be the case \citep[e.g.][]{Gladders2013,Kelson2014,Abramson2016b}, and that something can be learned about galaxy evolution (i.e. how individual galaxies develop in physical properties over time) by studying the mean properties of populations at different epochs.
-The picture is complicated by the addition of major and minor mergers which can rapidly change the physical properties of galaxies \citep[e.g.][]{Toomre1977,Lotz2008,Conselice2011,Conselice2014}, and the relative importance of in-situ, secular stellar mass growth vs. stellar mass aggregation via mergers is the subject of much work involving both observations and simulations \citep[e.g.][]{Robaina2009,Kaviraj2012,Stott2013,Lofthouse2016,Qu2016}. 
-To account for the growing number density of quiescent galaxies from z$\sim 2.5$ to the present day \citep[e.g.][]{Brammer2011} there must also be some process which shuts off star-formation within main sequence galaxies (i.e. quenching) which, to explain observations, is a function of both mass and environment \citep{Peng2010}.
-
-Recent cosmological volume simulations are able to resolve the complex interplay of baryonic processes which are at work as galaxies evolve, and can track the development of individual galaxies from early stages, to maturity and through quenching \citep{Dubois2014a,Vogelsberger2014b,Schaye2015}.
-Observations can aid the predictive power of such simulations by providing constraints on the evolving physical properties of galaxy populations which must be reproduced across cosmic time.
-The observed dynamical properties of galaxies contain information about the transfer of angular momentum between dark matter halos and the baryons, and the dissipation of this angular momentum thereafter (through gravitational collpase, mergers and outflows \cite[e.g.][]{Fall1983,Romanowsky2012,Fall2013}), constituting an important set of quantities for simulators to reproduce.
-Developments in both Integral-Field Spectroscopy (IFS) instrumentation and data analysis tools over the last decade have led to the observation of two-dimensional velocity and velocity dispersion fields for large samples of galaxies of different morphological types, spanning a wide redshift range \citep[e.g.][]{Sarzi2005,Flores2006,Epinat2008,ForsterSchreiber2009,Cappellari2011,Gnerucci2011,Epinat2012,Croom2012,Bundy2015,Wisnioski2015,Stott2016} and when interpreted in tandem with high-resolution imaging data from the Hubble Space Telescope (HST) these data provide exquisite information about the range of physical processes which are driving galaxy evolution.
-In particular, in recent years the multiplexing capabilities of KMOS have allowed for IFS kinematic observations for large galaxy samples to build up over much shorter timescales \citep{Sobral2013,Wisnioski2015,Stott2016,Harrison2016,Mason2016} providing an order of magnitude boost in statistical power over previous high-redshift campaigns.    
-
-SFGs generally appear to be increasing in random motions with increasing redshift between $0 < z < 3$, as traced by their observed velocity dispersions, $\sigma_{obs}$ \citep{Genzel2008,ForsterSchreiber2009,Law2009,Cresci2009,Gnerucci2011,Epinat2012,Kassin2012,Green2014,Wisnioski2015,Stott2016}.
-This has been explained in terms of increased `activity' in galaxies during and before the global peak in cosmic Star Formation Rate Density (SFRD) \citep{Madau_2014}, in the form of higher specific star formation rates (sSFR) \citep{Wisnioski2015}, larger gas reservoirs \citep{Law2009,ForsterSchreiber2009,Wisnioski2015,Stott2016}, more efficient accretion \citep{Law2009}, increased stellar feedback from supernovae \citep{Kassin2012} and turbulent disk instabilities \citep{Law2009,Bournaud2007,Bournaud2016}, all of which combine to increase $\sigma_{int}$ and complicate its interpretation.
-There is also an increasing body of work measuring the relationship between the observed maximum rotational velocity of a galaxy, a tracer for the total dynamical mass, and its stellar mass, known as the stellar mass Tully-Fisher Relation (smTFR) \citep{Tully1977}, with surveys reporting disparate results for the evolution of this relation with redshift \citep[e.g.][]{Puech2008,Miller2011,Gnerucci2011,Tiley2016a,Harrison2017}.
-In both cases, systematic differences in measurement and modelling techniques at high redshift, especially with regards to beam smearing corrections, combine with our poor understanding of progenitors and descendants to blur the evolutionary picture which these surveys paint.
-
-% seeking to reconcile these differences as much as possible and provide a baseline of consistent kinematic measurements for comparison. 
-
-The KMOS Deep Survey (KDS) is a guaranteed time programme focussing on the spatially resolved properties of star forming galaxies during a time where the universe is building to peak activity.
-There are still many open questions which we can begin to answer by studying the emission from regions of ionised gas within individual galaxies at these redshifts.
-For example: \textbf{(1)} How do the physical conditions of the ISM such as electron density and ionisation parameter change as a function of spatial position within the galaxy, and what does this tell us about the application of strong line metallicity calibrators at high redshift?
-\textbf{(2)} What are the radial gradients in metal enrichment and would evidence for inverse gradients suggest infall of pristine gas to the central regions of these galaxies?
-\textbf{(3)} What are the connections between the chemical properties and the kinematics of the gas, particularly in terms of inflows and outflows of material?
-\textbf{(4)} What role does formation environment play in shaping the dynamical and chemical evolution of galaxies? 
-
-Attempting to spatially resolve the flux from emission lines at $z \sim 3.5$ necessarily requires on source integration times $>$ 6 hours, and so the multiplexing capability provides KMOS with an enormous advantage in terms of observing time over other instruments for this type of study.
-This has the knock-on effect of enabling a more general galaxy selection criteria, so that the KDS targets will be representative of the main sequence star forming population. 
-
-Many of these questions have already been addressed at lower redshift, as described above \citep{ForsterSchreiber2009,Wisnioski2015,Stott2016}, and also in a similar redshift range \cite{Gnerucci2011}.
-The KDS will complement the lower redshift results by providing an additional data point on any plots showing evolutionary sequences of derived physical properties, therefore providing a more complete description of galaxy evolution starting from before cosmic high noon and running up to the present day.
-The high redshift results of \cite{Gnerucci2011} will be expanded upon by the KDS, which extends to lower stellar masses and will increase the sample size for which physical properties can be resolved by roughly a factor of three.
-
-In this paper we focus on deriving and interpreting the spatially resolved kinematics of KDS galaxies using the OIII$\lambda$5007 emission line, discussing what we can learn about the nature of galaxy formation at $z \sim 3.5$, and focussing on forming evolutionary links with lower redshift work.
-We combine our KMOS data with the high resolution and sensitivity of the Hubble Space Telescope (HST) WFC3 H-band imaging in a spectro-photometric analysis, so that the kinematics can also be understood in the context of galaxy morphology.
-In a future paper, (Turner \textit{et al.} in prep.), we will investigate the radial gradients in galaxy metallicity and hence the spatially resolved physical conditions within the ISM.
-
 The structure of the current paper is as follows. In \cref{sec:Survey_and_data} we present the survey description, sample selection, observation strategy and data reduction.
 In \cref{sec:extracting_properties} we explain how the two-dimensional maps of physical properties were extracted from our stacked datacubes and then describe the treatment of these maps and the modelling which leads to the final table of physical properties for the KDS galaxies. 
 \cref{sec:results} presents our physical findings which are then discussed in \cref{sec:discussion}.
@@ -179,7 +125,7 @@ We then conclude in \cref{sec:conclusions}.
 Throughout this work we assume a standard $\Lambda$CDM cosmology with (h, $\Omega_{m}$, $\Omega_{\Lambda}$) = (0.7, 0.3, 0.7). 
 
 \section{SURVEY DESCRIPTION, SAMPLE SELECTION AND OBSERVATIONS}\label{sec:sample_and_dr}
-The KDS is a survey of the gas kinematics and chemical compositions of $\sim80$typical $z\sim3.5$ galaxies observed with KMOS.
+The KDS is a survey of the gas kinematics and chemical compositions of $\sim80$ typical $z\sim3.5$ galaxies observed with KMOS.
 Full details of the survey, sample selection, data reduction, dynamical modelling and kinematic parameter extraction can be found in Turner et al. 2017, however we present a brief overview of the survey and the sample used throughout Section \ref{sec:results} in the following subsections.
 
 \subsection{The KDS \& sample selection}\label{subsec:sample_selection}
@@ -194,22 +140,33 @@ KMOS is a second generation IFS mounted at Nasmyth focal plane on UT1 at the VLT
 The instrument has 24 moveable pickoff arms, each with an integrated IFU, which patrol a region 7.2$^{\prime}$ in diameter on the sky, providing considerable flexibility when selecting sources for a single pointing.
 The light from each set of 8 IFUs is dispersed by a single spectrograph and recorded on a 2k$\times$2k Hawaii-2RG HgCdTe near-IR detector, so that the instrument is comprised of three effectively independent modules.
 
-The target galaxies were observed with KMOS during ESO observing periods P92-P96 using Guaranteed Time Observations (Programme IDs: 092.A-0399(A), 093.A-0122(A,B), 094.A-0214(A,B),095.A-0680(A,B),096.A-0315(A,B,C)) with excellent K-band seeing conditions ranging between $0.5-0.7^{\prime\prime}$.
+The target galaxies were observed with KMOS in the {\it H} and {\it K}-bands during ESO observing periods P92-P96 using Guaranteed Time Observations (Programme IDs: 092.A-0399(A), 093.A-0122(A,B), 094.A-0214(A,B), 095.A-0680(A,B), 096.A-0315(A,B,C)) with excellent K-band seeing conditions ranging between $0.5-0.7^{\prime\prime}$.
+At these redshifts, the H$\beta$, [O~{\sc III}]$\lambda$4960 and [O~{\sc III}]$\lambda$5007 emission lines are shifted into the {\it K}-band and the [O~{\sc II}]$\lambda$3727,3729 doublet is shifted into the {\it H}-band.
+When used together, these features are rich in both kinematic and chemical information.
 The on source exposure times range between 7-10 hours, accumulated using a standard object-sky-object (OSO) nod-to-sky observation pattern, with 300s exposures and alternating $0.2^{\prime\prime}$/$0.1^{\prime\prime}$ dither pattern for increased spatial sampling around each of the target galaxies.
 We also observe standard stars to allow for flux calibration of the data products and assign a tracking star to one IFU on each detector to monitor the shifts which must be applied to each exposure when stacking. \\ 
 
 Data reduction is carried out using the Software Package for Astronomical Reduction with KMOS, (SPARK; \cite{Davies2013}), implemented using the ESO Recipe Execution Tool (ESOREX) \citep{Freudling2013}, with additional python scripts for non-standard methods (Turner et al. 2017).
-Following the reduction of each object-sky pair, all exposures are stacked together to create a final datacube for each object. 
-We attempt to make an integrated measurement of the 
-
+Following the reduction of each object-sky pair, all exposures are stacked together to create a final datacube for each object which is flux calibrated using the standard star observations. 
+We attempt to make an integrated measurement of the O~{\sc III}]$\lambda$5007 emission line in each cube (the highest S/N line), detecting emission in 62 (81$\%$) of the target galaxies.
 
 \subsection{Morphological \& kinematic measurements}\label{subsec:measurements}
+We use {\tt GALFIT} \citep{Peng2010_galfit} to constrain the half-light radii, $R_{1/2}$, inclinations and position angles of the KDS galaxies by fitting exponential light profiles to the {\it HST} imaging.
+In each of the final datacubes where an integrated O~{\sc III}]$\lambda$5007 measurement is made, we extract two-dimensional flux, velocity and velocity dispersion maps by fitting gaussian profiles to the individual spatial-pixels (spaxels) of the cube (full details in Turner et al. 2017 section 3.2.1).
+We then construct a series of mock datacubes populated with O~{\sc III}]$\lambda$5007 emission lines with an exponential spatial flux distributions and with spectral position modelled to follow a two-dimensional velocity field which follows the arctangent function.
+These intrinsic models are convolved and fit to the observed velocity field to measure the best fitting intrinsic rotation velocities and also providing a beam-smearing correction for the velocity dispersions.
+In sum, the outcome of the dynamical modelling procedure is a measure of the intrinsic rotation velocity, $V_{C}$, and the intrinsic velocity dispersion, $\sigma_{int}$ for each galaxy in the isolated field sample. 
 
-\subsection{The isolated field sample}\label{subsec:isolated_field_sample}
-
+Additionally, the high-resolution imaging allows us to identify galaxies involved in probable merger events, for which the interpretation of velocity and velocity dispersion fields is complicated.
+After applying the spatially resolved condition and removing the merger candidates we are left with 32 galaxies, which we refer to as the isolated field sample throughout the remainder of the paper.
+The isolated field sample is further subdivided into `rotation dominated' with $V_{C}/\sigma_{int} > 1$ and `dispersion dominated' $V_{C}/\sigma_{int} < 1$ samples as a crude method to distinguish between whether ordered or random motions dominate the kinematics.
+The morphological and kinematic properties of the isolated field sample are listed in Tables 2 $\&$ 3 of Turner et al. 2017 respectively.
 
 \section{Results and Discussion}\label{sec:results}
-Comments in here about overall structure of the results section and what we will do.
+In Turner et al. 2017 we examined the rotation velocities, velocity dispersions and rotation dominated fraction of the isolated field sample.
+Throughout the remainder of this paper we discuss the virial mass budget of these galaxies, along with the stellar mass Tully-Fisher relation and angular momentum of the rotation and dispersion dominated subsamples.
+In each case we examine the impact of adding pressure support, sourced by turbulence which is traced by the velocity dispersion, to derive a `total' rotation velocity which is a better tracer of the full virial mass.
+These methods follow on from work at lower redshifts which suggest that dynamical support provided by a velocity dispersion term becomes increasingly significant at high redshift \citep[e.g.][]{Burkert2010,Newman2013,Wuyts2016b,Ubler2017}.  
 
 \subsection{Virial Mass}\label{subsec:dynamical_masses}
 
@@ -237,7 +194,7 @@ Assuming that the virial theorem is applicable to these galaxies, it is possible
    M\left(<R\right) = \frac{RV_{C}(R)^{2}}{G}
 \end{equation}
 
-For the KDS isolated field sample galaxies, as explained throughout \cref{sec:analysis}, the rotation velocities are extracted at $2R_{1/2}$ from the intrinsic models and so the mass enclosed within this radius is given by Equation \ref{eq:dyn_mass_kds} (where we refer hereafter to the mass enclosed as the virial mass, $M_{vir}$). 
+For the KDS isolated field sample galaxies the rotation velocities are extracted at $2R_{1/2}$ from the intrinsic models and so the mass enclosed within this radius is given by Equation \ref{eq:dyn_mass_kds} (where we refer hereafter to the mass enclosed as the virial mass, $M_{vir}$). 
 
 \begin{equation}\label{eq:dyn_mass_kds}
    M_{vir} = \frac{2R_{1/2}V_{C}^{2}}{G}
